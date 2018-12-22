@@ -1,0 +1,21 @@
+<!--start.wxml-->
+
+<button class="btn1" bindtap="getDataFromOneNet">
+历史数据曲线(OneNet)</button>
+
+<radio-group class="radio-group" bindchange="radioChange">
+  <label style="display: flex"  wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+
+<text id="text">提示：实时温度湿度光强异常时报警。</text>
+<button id="btn3"
+ bindtap="send">一键检测</button>
+
+<text id="faker">提示：点一下就可以浇水了。</text>
+<button id="btn8"
+ bindtap="water">给老子浇水</button>
+
+<button id="btn5"
+ bindtap="stop">给老子停</button>
